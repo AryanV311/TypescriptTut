@@ -19,9 +19,23 @@
 // console.log(typeChecking<string>("hello generics"));
 // console.log(typeChecking<boolean>(false));
 
+//!The + operator is not valid for all types in TypeScript. It's only defined for types that support concatenation (like string) or arithmetic operations (like number). thts why We can add constraints to ensure that the + operator is only applied to types that support it (number or string).
+
 // function add<T extends number | string>(a:T, b:T):T {
 //     return (a + b) as T;
 // }
 
 // console.log(add<number>(4,6));
 // console.log(add<string>("java","script"));
+
+//? to overcome this issue we use method overloading 
+
+function addd(a:number, b:number):number;
+function addd(a:string, b:string):string;
+function addd(a:number | string, b:number | string):number | string{
+    return a + b
+} 
+
+console.log(addd(56,56));
+console.log(addd("hello","Script"));
+
