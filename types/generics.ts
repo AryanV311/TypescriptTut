@@ -28,14 +28,20 @@
 // console.log(add<number>(4,6));
 // console.log(add<string>("java","script"));
 
+function add<T, U>(a:T, b:U){
+    return a + b
+}
+
+console.log(add<number,number>(55, 10))
+console.log(add<number,string>(5,"javascript"))
 //? to overcome this issue we use method overloading 
 
-function addd(a:number, b:number):number;
-function addd(a:string, b:string):string;
-function addd(a:number | string, b:number | string):number | string{
-    return a + b
-} 
+// function addd(a:number, b:number):number;
+// function addd(a:string, b:string):string;
+// function addd(a:number | string, b:number | string):number | string{
+//     return a + b
+// } 
 
-console.log(addd(56,56));
-console.log(addd("hello","Script"));
+// console.log(addd(56,56));
+// console.log(addd("hello","Script"));
 
