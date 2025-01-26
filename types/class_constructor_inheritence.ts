@@ -13,9 +13,6 @@
 //? now if i have to pass directlty in Object like this Person("user",23,true,["","",""]) so we have to create constructor for this,
 
 
-
-
-
 class Persons {
     name:string;
     age:number;
